@@ -36,6 +36,8 @@ export default [
 			".github/",
 			// Generated at prebuild/predev by bin/fetch-skills.ts (gitignored).
 			"skills/",
+			// Vendored from nextlevelbuilder/ui-ux-pro-max-skill (MIT); kept as upstream.
+			".agents/skills/brand/",
 		],
 	},
 	{
