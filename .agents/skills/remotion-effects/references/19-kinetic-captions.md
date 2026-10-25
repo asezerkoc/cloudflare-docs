@@ -73,7 +73,8 @@ export const KineticCaptions: React.FC<KineticCaptionsProps> = ({
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          gap: "0 28px",
+          // Gap scales with the font so the enlarged active word never touches its neighbours
+          gap: `0 ${fontSize * 0.5}px`,
           maxWidth: 1500,
           fontFamily: "Montserrat, Arial Black, sans-serif",
           fontWeight: 900,
@@ -94,7 +95,7 @@ export const KineticCaptions: React.FC<KineticCaptionsProps> = ({
                 display: "inline-block",
                 color: active ? highlight : "white",
                 opacity: visible ? 1 : 0,
-                transform: `scale(${visible ? interpolate(pop, [0, 1], [0.6, active ? 1.12 : 1]) : 0.6}) translateY(${interpolate(pop, [0, 1], [20, 0])}px)`,
+                transform: `scale(${visible ? interpolate(pop, [0, 1], [0.6, active ? 1.06 : 1]) : 0.6}) translateY(${interpolate(pop, [0, 1], [20, 0])}px)`,
                 WebkitTextStroke: "6px black",
                 paintOrder: "stroke fill",
                 textShadow: "0 8px 0 rgba(0,0,0,0.35)",
